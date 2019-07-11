@@ -1,0 +1,33 @@
+
+<html>
+
+<script>
+// write a program convert '475' string data type to number
+//date:7/11/2019
+
+var st_value='475';
+console.log('value:'+st_value+'<br>'+'type:'+typeof st_value);
+var  nm_value=parseInt(st_value);
+console.log('value:'+nm_value+'<br>'+'type:'+typeof nm_value);
+
+//Write a program that takes user input. Convert and
+//show the input in capital letters.
+/*
+var a=prompt('enter a string');
+var upper_case =a.toUpperCase();
+console.log(upper_case)
+*/
+
+//Write a program that takes user input. Convert and
+//show the input in title case.
+var i;
+var str='enter a string'
+str=str.toLowerCase().split(' ')
+console.log(str);
+for (i=0;i<str.length;i++){
+    str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+      console.log(str)
+}
+console.log(str.join(' ')) 
+</script>
+</html>
