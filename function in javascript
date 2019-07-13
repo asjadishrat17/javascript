@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<body>
+
+<script >
+/*Write a JavaScript function that accepts a string as aparameter and find the longest word within the string.
+EXAMPLE STRING : 'Web Development Tutorial'EXPECTED OUTPUT : 'Development'*/
+
+function count_length(word){
+var word=word.split(' ')
+var final_length=0
+console.log(word)
+for(var i=0;i<word.length;i++){
+    var find_len =word[i].length
+    var my_word
+
+    if (final_length < find_len  ){
+     final_length= find_len
+     my_word=word[i]
+    }
+}
+console.log(final_length+' ',my_word)
+}
+//count_length('welcome to javascript world');
+/*
+Write a JavaScript function that accepts two arguments, astring and a letter and the function will count the number of
+occurrences of the specified letter within the string.Sample arguments : 'JSResourceS.com', 'o'
+*/
+
+function count_occurance(word,find){
+word =word.split('')
+var count =0
+for (var i=0;i<word.length;i++){
+
+if (find ===word[i])
+{count=count+1}
+}
+console.log(count)
+}
+
+count_occurance('wOrdfinder.comoo','o')
+
+</script>
+</body>
+
+</html>
