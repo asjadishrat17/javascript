@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+  function get_city(){
+let list_index= document.getElementById("list")
+var index =list_index.selectedIndex
+var name = list_index.options
+var name1 = name[index]
+var list_value =name1.value
+console.log(index +" "+name)
+document.getElementById("city").innerText='you have select '+list_value
+
+//let list_name =document.getElementById("class")
+
+}
+
+function save_gender(){
+    var gender =document.getElementsByName("gender")
+    var value=''
+for (var i=0;i<gender.length ; i++){
+  if (gender[i].checked){
+     value= gender[i].value
+  break;}
+}
+document.getElementById("gender").innerText= 'you have select '+value
+}
+
+</script>
+
+
+<body>
+    
+
+
+    <select name="list" id ="list">
+        <option value="karachi"> karachi</option>
+        <option value="lahore"> lahore</option>
+        <option value="islamabad"> islamabad</option>
+        <option value="quetta"> quetta</option>
+        <option value="peshawar"> peshawar</option>
+
+    </select>
+<button onclick="get_city()">  click me  </button>
+<br> <p id="city"> </p><br>
+<h1>gender </h1>
+Female:<input type="radio" value="female" name="gender">
+Male:  <input type="radio" value="male"   name="gender">
+<button onclick="save_gender()"> save </button>
+<p id="gender"> </p>
+
+
+
+
+</body>
+</html>
