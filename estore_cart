@@ -1,0 +1,141 @@
+<html>
+<head> 
+<style>
+.tabl {border: 1px solid black; width: 100%; height: 100%;/* position:relative;*/ }
+
+.btn_head {background-color: aqua; height: 34px; width: 90px;  }
+           
+div.btn_div{ position:absolute ; left: 44px; }
+
+.cart_div {border: 1px solid black;  width: 19%; height: 275px; text-align: center; margin-right: 15px; background-color: aqua;}
+
+.div_grp1{margin-top: 70px;}
+
+.cart_parent{border:1px}  
+  
+p.card_detail {padding-top: 85px;}
+
+td { display: flex; }
+
+.div_grp2 {margin-left: 65px;  margin-top: 53px;}
+
+
+</style>
+</head>
+<body>
+    <table class="tabl">
+         <tr class="tbl_opt">
+            <div class="btn_div">
+             <button class="btn_head">mobile   </button>
+             <button class="btn_head">flower    </button>
+             <button class="btn_head">items     </button>
+             <button class="btn_head">furniture </button>
+
+             <P id="count">   </P>
+            </div>
+            </tr> 
+         <tr class="tbl_opt">
+            
+          <td>  
+              <div id=1 class="cart_div div_grp1" onmouseout=showButtons(1,0) onmouseover=showButtons(1,1)>   
+                       <div id="1c"> <p class="card_detail"><strong>Item 000</strong> <br> 300 x 300 <br> <strong>RS: 90/-</strong> </p>     
+                        <button class="sub_add" style="opacity: 0"  onclick=counter(1,-1)> - </button> 
+                        <button class="sub_add" style="opacity: 0" onclick=counter(1,1)> + </button> 
+                       </div>
+                </div>
+
+                <div id=2 class="cart_div div_grp1" onmouseout=showButtons(2,0) onmouseover=showButtons(2,1)>   
+                        <div > <p class="card_detail"><strong>Item 001</strong> <br> 300 x 300 <br> <strong>RS: 50/-</strong> </p>     
+                         <button class="sub_add" style="opacity: 0" onclick=counter(2,-1)> - </button> 
+                         <button class="sub_add" style="opacity: 0" onclick=counter(2,1)> + </button> 
+                        </div>
+                 </div>
+                     
+                 
+                <div id=3 class="cart_div div_grp1" onmouseout=showButtons(3,0) onmouseover=showButtons(3,1)>   
+                        <div > <p class="card_detail"><strong>Item 001</strong> <br> 300 x 300 <br> <strong>RS: 50/-</strong> </p>     
+                         <button class="sub_add" style="opacity: 0" onclick=counter(3,-1)> - </button> 
+                         <button class="sub_add" style="opacity: 0" onclick=counter(3,1)> + </button> 
+                        </div>
+                 </div>
+                 
+                 <div id=4 class="cart_div div_grp1" onmouseout=showButtons(4,0) onmouseover=showButtons(4,1)>   
+                        <div > <p class="card_detail"><strong>Item 001</strong> <br> 300 x 300 <br> <strong>RS: 50/-</strong> </p>     
+                         <button class="sub_add" style="opacity: 0" onclick=counter(4,-1)> - </button> 
+                         <button class="sub_add" style="opacity: 0" onclick=counter(4,1)> + </button> 
+                        </div>
+                 </div>
+
+                 <div id=5 class="cart_div div_grp1" onmouseout=showButtons(5,0) onmouseover=showButtons(5,1)>   
+                        <div > <p class="card_detail"><strong>Item 001</strong> <br> 300 x 300 <br> <strong>RS: 50/-</strong> </p>     
+                         <button class="sub_add" style="opacity: 0" onclick=counter(5,-1)> - </button> 
+                         <button class="sub_add" style="opacity: 0" onclick=counter(5,1)> + </button> 
+                        </div>
+                 </div>
+                
+                </td>
+                <td>   
+                <div id=6 class="cart_div div_grp2" onmouseout=showButtons(6,0) onmouseover=showButtons(6,1)>
+                    <div class=""> <p class="card_detail"><strong>Item 005</strong> <br> 300 x 300 <br> <strong>RS: 90/-</strong> </p>       
+                        <button class="sub_add" style="opacity: 0" onclick=counter(6,-1)> - </button> 
+                        <button class="sub_add" style="opacity: 0" onclick=counter(6,1)> + </button> 
+                    </div>
+                </div> 
+
+                <div id=7 class="cart_div div_grp2" onmouseout=showButtons(7,0) onmouseover=showButtons(7,1)>
+                        <div class=""> <p class="card_detail"><strong>Item 005</strong> <br> 300 x 300 <br> <strong>RS: 90/-</strong> </p>      
+                            <button class="sub_add" style="opacity: 0" onclick=counter(7,-1)>  - </button> 
+                            <button class="sub_add" style="opacity: 0" onclick=counter(7,1)> + </button> 
+                        </div>
+                    </div> 
+
+                    <div id=8 class="cart_div div_grp2" onmouseout=showButtons(8,0) onmouseover=showButtons(8,1)>
+                            <div class=""> <p class="card_detail"><strong>Item 005</strong> <br> 300 x 300 <br> <strong>RS: 90/-</strong> </p>      
+                                <button class="sub_add" style="opacity: 0" onclick=counter(8,-1)> - </button> 
+                                <button class="sub_add" style="opacity: 0" onclick=counter(8,1)> + </button> 
+                            </div>
+                        </div> 
+
+                        <div id=9 class="cart_div div_grp2" onmouseout=showButtons(9,0) onmouseover=showButtons(9,1) >
+                                <div class=""> <p class="card_detail"><strong>Item 005</strong> <br> 300 x 300 <br> <strong>RS: 90/-</strong> </p>       
+                                    <button class="sub_add" style="opacity: 0" onclick=counter(9,-1)> - </button> 
+                                    <button class="sub_add" style="opacity: 0" onclick=counter(9,1)> + </button> 
+                                </div>
+                            </div> 
+                </td>
+
+         </tr>  
+    </table>
+<script>
+function showButtons(id,op){
+var node=document.getElementById(id)
+node.children[0].children[1].style.opacity=op
+node.children[0].children[2].style.opacity=op
+}
+
+var count =0
+var all_item=[]
+function counter(id,add){
+ 
+ var a = document.getElementById(id)
+ var item_name = a.children[0].children[0].children[0].textContent
+
+ all_item.push(item_name)
+ count=all_item.length()
+ document.getElementById("count").innerText=count
+/*
+if (add < 0 && count ==0 ) {
+    document.getElementById("count").innerText=0;}  
+else
+    count =count + add
+    
+    console.log(all_item);
+    }
+
+*/
+
+
+</script>
+  
+</body>
+</html>
